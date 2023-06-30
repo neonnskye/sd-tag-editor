@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <p>Welcome! Here's a list of datasets available to edit.</p>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Images</th>
+            <th>Created</th>
+            <th>Modified</th>
+            <th>Download</th>
+            <th>Delete</th>
+        </tr>
+        {% for item in dataset_metadata %}
+        <tr>
+            <td><a href="/edit/{{ item.name }}">{{ item.name }}</a></td>
+            <td>{{ item.images }}</td>
+            <td>{{ item.created }}</td>
+            <td>{{ item.modified }}</td>
+            <td><a href="/download/{{ item.name }}">Download</a></td>
+            <td><a href="/delete/{{ item.name }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

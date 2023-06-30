@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete {{ dataset_name }}</title>
+</head>
+
+<body>
+    <a href="/">Home</a>
+    <p>Are you sure you want to continue? This action cannot be reversed.</p>
+    <form action="/delete/{{ dataset_name }}/confirm" method="post">
+        <button type="submit">Delete {{ dataset_name }}</button>
+    </form>
+</body>
+
+</html>

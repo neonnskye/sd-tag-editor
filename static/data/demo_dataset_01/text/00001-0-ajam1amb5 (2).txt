@@ -1,0 +1,1 @@
+To upload files, send a POST request to /upload. To download, send a GET request to /download/<dataset_name>
